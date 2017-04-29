@@ -9,7 +9,7 @@ Currently the repository contains two different pathfinding algorithms:
 ***
 
 # Prim's Algorithm
-This one is fairly simple. The program generates a random graph with n nodes (which can be changed- _1000_ by default) which assumes all nodes on the graph can theoretically be connected. Once the mouse is pressed the program calculates the minimum spanning tree accross the network and displays it. The time taken to perform this is output to the console (in ms) and, if uncommented, the program will display the weight of the network (sqared for performance). 
+This one is fairly simple. The program generates a random graph with n nodes (which can be changed- _100_ by default) which assumes all nodes on the graph can theoretically be connected. Once the mouse is pressed the program calculates the minimum spanning tree accross the network and displays it. The time taken to perform this is output to the console (in ms) and, if uncommented, the program will display the weight of the network (sqared for performance). 
 
 ***
 
@@ -27,3 +27,7 @@ This is slightly more complicated, but just as fun and simple in essence. The pr
 ***
 
 # References
+
+* Prim's Algorithm: https://en.wikipedia.org/wiki/Prim%27s_algorithm
+* Dijkstra Algorithm: https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+
