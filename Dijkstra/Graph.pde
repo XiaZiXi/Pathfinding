@@ -19,7 +19,7 @@ class Graph {
     display();
   }
   
-  void dijstra(int stI) {
+  void dijkstra(int stI) {
     for(int i = 0; i < nodes.size(); i++){
       nodes.get(i).reset();
     }
@@ -28,9 +28,9 @@ class Graph {
     nodes.get(i).store = 0;
     nodes.get(i).value = 0;
     nodes.get(i).connected = true;
-    while(!complete()) {
+    while(!complete()) { // Run until all nodes are connected.
       for(int j = 0; j < nodes.size(); j++) {
-        // For a new node
+        // Update values changed in graph as a result of the new node being connected 
         if(j != i && !nodes.get(j).connected && nodes.get(i).paths.contains(nodes.get(j))) {
           float d = sq(nodes.get(i).location.x - nodes.get(j).location.x) + sq(nodes.get(i).location.y - nodes.get(j).location.y) + nodes.get(i).value;
           if(d < nodes.get(j).store){
@@ -52,6 +52,7 @@ class Graph {
         }
       }
       
+      // Update values for best newly connected node
       nodes.get(bestI).connected = true;
       nodes.get(bestI).value = nodes.get(bestI).store;
       nodes.get(nodes.get(bestI).stoIndex).connections.add(nodes.get(bestI));

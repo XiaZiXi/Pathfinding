@@ -1,4 +1,5 @@
 // Dijkstra's Algorithm
+// By Miles Elvidge, 29/04/17
 
 Graph g;
 
@@ -28,5 +29,7 @@ void mousePressed() {
       closestI = i;
     }
   }
-  g.dijstra(closestI);
+  
+  // Perform the Dijkstra algorithm for the graph and starting node
+  g.dijkstra(closestI);
 }

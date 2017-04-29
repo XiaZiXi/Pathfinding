@@ -1,4 +1,5 @@
 // Prims's Algorithm
+// By Miles Elvidge, 29/04/17
 
 Graph g;
 
@@ -17,5 +18,6 @@ void draw() {
 }
 
 void mousePressed() {
+  // Calculate Minimum spanning tree
   g.prims();
 }
