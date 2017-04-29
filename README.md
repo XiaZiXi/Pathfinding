@@ -20,6 +20,13 @@ This is slightly more complicated, but just as fun and simple in essence. The pr
 
 ***
 
+![alt text](http://i.imgur.com/FvKMpfb.png "Pre-calculation Prim's Graph")
+![alt text](http://i.imgur.com/6mGaJrz.png "Post calculation Prim's Minimum Spanning Tree")
+![alt text](http://i.imgur.com/CiDPzYD.jpg "Pre-calculation Dijstra's Graph")
+![alt text](http://i.imgur.com/yuCNYeZ.jpg "Post calculation Dijstra's Graph with minimum path from an arbitrary starting vertex to all other vertices")
+
+***
+
 # TODO
 * Write the A-Star pathfinding algorithm algorithm for an abstract graph.
 * Write a prevention for disconnected graphs (in Dijkstra).
