@@ -52,8 +52,8 @@ How to use:
 ***
 
 # TODO
-* Write the A-Star pathfinding algorithm algorithm for an abstract graph.
-* Write a prevention for disconnected graphs (in Dijkstra).
+* Genetic Algorithm for the travelling sale's person (inspired by Dan Shiffman).
+* Breadth first search.
 
 ***
 
@@ -61,4 +61,5 @@ How to use:
 
 * Prim's Algorithm: https://en.wikipedia.org/wiki/Prim%27s_algorithm
 * Dijkstra Algorithm: https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+* A\* Algorithm: https://en.wikipedia.org/wiki/A*_search_algorithm
 
