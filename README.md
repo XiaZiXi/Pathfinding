@@ -25,7 +25,7 @@ How to use:
 * Repeat as many times as you want for any node!
 
 ## A Star
-The most complex I have made yet! The generation of the network is the same Dijkstra's implementation.
+The most complex searching algorithm I have made yet! The generation of the network is the same Dijkstra's implementation.
 
 How to use: 
 * The program generates an abstract graph with n nodes (_1000_ by default).
