@@ -21,8 +21,8 @@ void mousePressed() {
   // get closest node to mouse
   float closest = 1000000000; 
   int closestI = -1;
-  for(int i = 0; i < g.nodes.size(); i++) {
-    Node node = g.nodes.get(i);
+  for(int i = 0; i < g.nodes.length; i++) {
+    Node node = g.nodes[i];
     float d = sq(mouseX - node.location.x) + sq(mouseY - node.location.y);
     if(d < closest) {  
       closest = d;

@@ -1,13 +1,14 @@
 class Graph {
-  ArrayList<Node> nodes = new ArrayList<Node>();
+  Node[] nodes;
   int order;
   double dis = 0;
   
   Graph(int n) {
     // Setup the graph, randomly positioned nodes on the 2D display plane
     order = n;
+    nodes = new Node[order];
     for(int i = 0; i < n; i++) { 
-      nodes.add(new Node(new PVector(random(width), random(height))));
+      nodes[i] = new Node(new PVector(random(width), random(height)));
     }
     display();
   }
@@ -15,17 +16,17 @@ class Graph {
   void prims() {
     long stTime = System.nanoTime(); // For time calculation 
     int i = 0; // Assign starting node
-    nodes.get(i).store = 0;
-    nodes.get(i).connected = true;
+    nodes[i].store = 0;
+    nodes[i].connected = true;
     double len = 0;
     while(!complete()) {
-      for(int j = 0; j < nodes.size(); j++) {
+      for(int j = 0; j < nodes.length; j++) {
         // For newly connected node, calculate new values which arise in this graph due to this change
-        if(j != i && !nodes.get(j).connected) {
-          float d = sq(nodes.get(i).location.x - nodes.get(j).location.x) + sq(nodes.get(i).location.y - nodes.get(j).location.y);
-          if(d < nodes.get(j).store){
-            nodes.get(j).store = d;
-            nodes.get(j).stoIndex = i;
+        if(j != i && !nodes[j].connected) {
+          float d = sq(nodes[i].location.x - nodes[j].location.x) + sq(nodes[i].location.y - nodes[j].location.y);
+          if(d < nodes[j].store){
+            nodes[j].store = d;
+            nodes[j].stoIndex = i;
           }
         }
       }
@@ -33,19 +34,19 @@ class Graph {
       // Get next node
       float best = 10000000;
       int bestI = -1;
-      for(int j = 0; j < nodes.size(); j++) {
-        if(!nodes.get(j).connected && nodes.get(j).store > 0) {
-          if(nodes.get(j).store < best) {
-            best = nodes.get(j).store;
+      for(int j = 0; j < nodes.length; j++) {
+        if(!nodes[j].connected && nodes[j].store > 0) {
+          if(nodes[j].store < best) {
+            best = nodes[j].store;
             bestI = j;
           }
         }
       }
       
       // Update new details for newly connected node
-      nodes.get(bestI).connected = true;
-      nodes.get(nodes.get(bestI).stoIndex).connections.add(nodes.get(bestI));
-      nodes.get(bestI).connections.add(nodes.get(nodes.get(bestI).stoIndex));
+      nodes[bestI].connected = true;
+      nodes[nodes[bestI].stoIndex].connections.add(nodes[bestI]);
+      nodes[bestI].connections.add(nodes[nodes[bestI].stoIndex]);
       i = bestI;
       len += best;
     }

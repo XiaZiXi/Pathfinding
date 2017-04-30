@@ -2,8 +2,8 @@ class Node {
   boolean connected = false;
   ArrayList<Node> connections = new ArrayList<Node>();
   PVector location;
-  float store; // Smallest distance
-  int stoIndex; // Index to location of smallest value in graph
+  float store; // Smallest distance to node
+  int stoIndex; // Index for the location of the node which leads the smallest distance
   
   Node(PVector pos) {
     location = pos;
