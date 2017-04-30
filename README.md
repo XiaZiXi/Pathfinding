@@ -24,7 +24,7 @@ How to use:
 * Click at any point on the screen to perform Dijkstra's algorithm, starting at the nearest nodes, to all other points on the network.
 * Repeat as many times as you want for any node!
 
-## A Star
+## A\* Search Algorithm
 The most complex searching algorithm I have made yet! The generation of the network is the same Dijkstra's implementation.
 
 How to use: 
