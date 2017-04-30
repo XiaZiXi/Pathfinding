@@ -40,7 +40,7 @@ class Graph {
     
     while(canContinue()) {
       // Repeat until finished
-      int lowestI = -1;
+      int lowestI = -1; // Find the node with the lowest fScore.
       for(int i = 0; i < nodes.length; i++) {
         if(nodes[i].isOpen) {
           if(lowestI == -1) {
@@ -55,6 +55,7 @@ class Graph {
         break;
       }
       
+      // Examine values for all of the current node's neighbours to close analysis
       nodes[lowestI].isOpen = false;
       nodes[lowestI].isClosed = true;
       for(int i = 0; i < nodes[lowestI].neighbours.size(); i++) {
@@ -110,7 +111,6 @@ class Graph {
     for(Node n : nodes) {
       if(n.isOpen) { return true; }
     }
-    
     return false;
   }
   

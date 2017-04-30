@@ -1,5 +1,5 @@
 // A Star's Algorithm
-// By Miles Elvidge, 29/04/17
+// By Miles Elvidge, 30/04/17
 
 Graph g;
 boolean SorF = true; // True == Plot Start, False == Plot finish
